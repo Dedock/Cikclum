@@ -1,0 +1,376 @@
+body {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+input, button:focus {
+  outline: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 48px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: 450px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+.shellLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 450px) {
+    & {
+      margin-left: 9px;
+    }
+
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  img {
+    display: block;
+    width: 108px;
+    max-height: 23px;
+  }
+}
+
+.headerNavigation {
+  font-family: "Segoe UI";
+}
+
+.storeDropDownContent1 {
+  display: none;
+  position: absolute;
+  background-color: #d1d1d1;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 3;
+  .dropDownItem {
+    display: none;
+  }
+  .dropDownBodyItem:hover {
+    .dropDownItem {
+      margin-left: 20px;
+      float: right;
+      display: block;
+    }
+  }
+}
+
+.storeDropDownContent2 {
+  display: none;
+  position: absolute;
+  background-color: #d1d1d1;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 3;
+
+  dl {
+    margin-left: 10px;
+  }
+  .dropDownItem {
+    display: none;
+  }
+  .dropDownBodyItem:hover {
+    .dropDownItem {
+      margin-left: 20px;
+      float: right;
+      display: block;
+    }
+  }
+}
+
+/*
+
+@media (min-width: 899px) {
+  .headerDropDownContent {
+    position: absolute;
+    width: auto;
+    padding: 0 0 8px;
+    background: #f2f2f2;
+  }
+
+}
+*/
+
+.shellLogIn {
+  display: block;
+  float: right;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.shellNavigationMenu {
+  margin: 0 0 0 18px;
+  position: static;
+  width: auto;
+  height: auto;
+  max-width: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+    li {
+      display: block;
+      -webkit-transition: background-color 0.3s ease-out 0.3s;
+      -moz-transition: background-color 0.3s ease-out 0.3s;
+      -o-transition: background-color 0.3s ease-out 0.3s;
+      -ms-transition: background-color 0.3s ease-out 0.3s;
+      transition: background-color 0.3s ease-out 0.3s;
+      a {
+        padding: 0 14px;
+        line-height: 48px;
+      }
+      &:hover {
+        background-color: #ededed;
+        cursor: pointer;
+      }
+
+    }
+
+    @media (min-width: 899px) {
+      li {
+        a {
+
+          padding: 0 1.5em;
+          line-height: 48px;
+        }
+      }
+    }
+  }
+}
+
+.headerDropDownContent1 {
+  dl {
+    padding: 17px 24px;
+  }
+}
+
+.headerDropDownContent2 {
+  dl {
+    padding: 17px 24px;
+  }
+}
+
+.shellSearch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: 950px) {
+    input {
+      display: none;
+
+    }
+  }
+
+  @media (min-width: 899px) {
+    & {
+      width: auto;
+      //padding: 7px 5px 0 0;
+    }
+  }
+
+  button {
+    box-sizing: border-box;
+    width: 33px;
+    height: 30px;
+    padding: 0;
+    /* margin-left: -4px; */
+    border: 0;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media (min-width: 945px) {
+    button {
+      background-color: transparent;
+      position: static;
+      border: 1px solid #A9A9A9;
+      border-left: none;
+      height: 36px;
+
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0 0 0 0;
+    font: 13.3333px Arial;
+  }
+  input:-moz-placeholder {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+  }
+  input {
+    width: 244px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #A9A9A9;
+    border-right: 0;
+
+  }
+
+}
+
+.shellCart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  padding: 17px 10px;
+  margin-left: 6px;
+  height: 14px;
+  -webkit-transition: background-color 0.3s ease-out 0.3s;
+  -moz-transition: background-color 0.3s ease-out 0.3s;
+  -o-transition: background-color 0.3s ease-out 0.3s;
+  -ms-transition: background-color 0.3s ease-out 0.3s;
+  transition: background-color 0.3s ease-out 0.3s;
+
+  &:hover {
+    background-color: #ededed;
+    cursor: pointer;
+
+  }
+}
+
+.smartAmount {
+  font-size: .75em;
+  float: right;
+  margin-left: 3px;
+  margin-top: 3px;
+  align-items: center;
+}
+
+.shellNavigation {
+  display: flex;
+  flex-direction: row;
+  li {
+    display: inline;
+  }
+}
+
+.shellUserAction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.shellDropDownButton {
+
+  padding: 8px;
+
+  @media (min-width: 850px) {
+    display: none;
+
+  }
+
+  &:hover {
+    background-color: #ededed;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+    -moz-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+    -o-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+    -ms-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+    transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+  }
+}
+
+.shellLogIn {
+  line-height: 48px;
+  display: block;
+  padding: 0 10px;
+  font-family: "Segoe UI";
+  font-size: 86%;
+  -webkit-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+  -moz-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+  -o-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+  -ms-transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+  transition: background-color 0.3s ease-out 0.3s, color 0.3s ease-out 0.3s;
+
+  @media (max-width: 450px) {
+    & {
+      display: none;
+    }
+
+  }
+
+  &:hover {
+    background-color: #ededed;
+    color: #3e88ff;
+    cursor: pointer;
+  }
+
+}
+
+.icons8-Menu { /* Customizes Menu icon */
+  fill: #919191;
+  width: 28px;
+  height: 29px;
+}
+
+.icon { /* Customizes all icons at once */
+  display: inline-block;
+}
+
+.icons8-Search { /* Customizes Search icon */
+  fill: #000000;
+  width: 20px;
+  height: 20px;
+  &:hover {
+    fill: #3e88ff;
+  }
+}
+
+.icon { /* Customizes all icons at once */
+  display: inline-block;
+}
+
+.show {
+  display: block;
+}
